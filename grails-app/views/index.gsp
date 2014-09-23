@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
+		<title>Tesla</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -23,26 +23,21 @@
 				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
 			}
 
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
+			
 
 			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
+				margin: 1.5em 0em 0em 0em;
+				background-image: url('${resource(dir: "images", file: "model-s.png")}');
+				 height: 540px;
+				
+				}
+					 
+				#page-body img{
+					 
+					 width:960px; 
+					 height: 444px;
+					}
+			
 
 			h2 {
 				margin-top: 1em;
@@ -64,6 +59,70 @@
 				list-style-position: inside;
 				margin: 0.25em 0;
 			}
+			
+			#production{
+				li{
+				float:left;
+				}
+			}
+			
+			#war{
+				padding-left: 100px;
+				padding-top: 340px;
+				font-size: 35px;
+				color: white;
+				text-decoration: underline;	
+				}
+				
+				#text{
+				padding-left: 98px;
+				font-size: 15px;
+				color: white;
+					
+				}
+				
+			#welcome{
+				padding-top: 40px;
+				padding-left: 40px;
+				font-size: 40px;
+			}
+			
+			#div1{
+			background-image: url('${resource(dir: "images", file: "supers.png")}');"
+			 	border-style: solid;
+				border-color: black;
+				width: 300px;
+				margin-left: 10px;
+				margin-top: 20px;
+				margin-bottom: 15px;
+				box-shadow: 4px 4px 5px #888888;
+				float:left;
+				height: 200px;
+			 }
+			 #div2{
+			background-image: url('${resource(dir: "images", file: "customers.png")}');"
+			 	border-style: solid;
+				border-color: black;
+				width: 300px;
+				margin-left: 10px;
+				margin-top: 20px;
+				margin-bottom: 15px;
+				box-shadow: 4px 4px 5px #888888;
+				float:left;
+				height: 200px;
+			 }
+			 #div3{
+			background-image: url('${resource(dir: "images", file: "order.png")}');"
+			 	border-style: solid;
+				border-color: black;
+				width: 300px;
+				margin-right: 20px;
+				margin-top: 20px;
+				margin-bottom: 15px;
+				box-shadow: 4px 4px 5px #888888;
+				float:right;
+				height: 200px;
+			 }
 
 			@media screen and (max-width: 480px) {
 				#status {
@@ -81,42 +140,54 @@
 		</style>
 	</head>
 	<body>
+	
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
+		
+		
 		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
-
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
+		
+		<div id="welcome">Welcome to Tesla</div>
+		
+			
+			<div id="war">INFINITE MILE WARRANTY</div>
+			<div id="text">8 year mile warranty on Model S 85kWh battery and drive unit</div>
+			
+			
+           <div style="background-color: silver; height: 250px;">
+           	<table id="div1">
+					<tr style="text-align:center;">
+				</tr>
+				</table>
+			
+			
+			<table id="div2">
+					<tr style="text-align:center;">
+				</tr>
+				</table>
+			
+	
+       
+       
+       	<table id="div3">
+					<tr style="text-align:center;">
+				</tr>
+				</table>
+			
+			
 			</div>
+	
+         
+		
+			
+			<div style="background-color: silver;"></div>
+			
+		
+		
+
+			
+				
+			
 		</div>
+		<!--  <footer><li> <g:link controller="buyer" action="buyerAdd">Test add Buyer</g:link></li></footer>-->
 	</body>
 </html>

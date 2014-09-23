@@ -24,5 +24,7 @@
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
 		<r:layoutResources />
+	
+		<div class="footer" role="contentinfo"> <li> <g:link controller="admin" action="index">Admin Page</g:link></li></div>
 	</body>
 </html>
