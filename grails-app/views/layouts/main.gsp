@@ -28,3 +28,4 @@
 		<div class="footer" role="contentinfo"> <li> <g:link controller="admin" action="index">Admin Page</g:link></li></div>
 	</body>
 </html>
+ 
