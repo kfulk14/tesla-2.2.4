@@ -8,6 +8,7 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
+	<%--  
 		<a href="#show-model" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
@@ -23,11 +24,13 @@
 			</g:if>
 			<ol class="property-list model">
 			
-				<g:if test="${modelInstance?.modelSpecs}">
+				<g:if test="${modelInstance?.modelSpec}">
 				<li class="fieldcontain">
-					<span id="modelSpecs-label" class="property-label"><g:message code="model.modelSpecs.label" default="Model Specs" /></span>
+					<span id="modelSpec-label" class="property-label"><g:message code="model.modelSpec.label" default="Model Spec" /></span>
 					
-						<span class="property-value" aria-labelledby="modelSpecs-label"><g:link controller="modelSpec" action="show" id="${modelInstance?.modelSpecs?.id}">${modelInstance?.modelSpecs?.encodeAsHTML()}</g:link></span>
+						<g:each in="${modelInstance.modelSpec}" var="m">
+						<span class="property-value" aria-labelledby="modelSpec-label"><g:link controller="modelSpec" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
@@ -59,5 +62,20 @@
 				</fieldset>
 			</g:form>
 		</div>
+		--%>
+		<div id="mainBody">
+		<h1>Model name: ${modelInstance.name }</h1>
+		<h1>Price: ${modelInstance.startingCost }</h1>
+		</div>
+		
+		<div id="modelSpecs">
+			<g:each in="${modelInstance.modelSpecs}" var="spec">
+				<div>
+					<g:render template="/modelSpec/display" model="[modelSpec: spec]" />
+				</div>
+			</g:each>
+		</div>
+		
+		
 	</body>
 </html>

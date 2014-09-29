@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="distanceRange" title="${message(code: 'modelSpec.distanceRange.label', default: 'Distance Range')}" />
 					
+						<th><g:message code="modelSpec.model.label" default="Model" /></th>
+					
 						<g:sortableColumn property="name" title="${message(code: 'modelSpec.name.label', default: 'Name')}" />
 					
 						<g:sortableColumn property="powerOutlet" title="${message(code: 'modelSpec.powerOutlet.label', default: 'Power Outlet')}" />
@@ -43,6 +45,8 @@
 						<td><g:link action="show" id="${modelSpecInstance.id}">${fieldValue(bean: modelSpecInstance, field: "additionalCost")}</g:link></td>
 					
 						<td>${fieldValue(bean: modelSpecInstance, field: "distanceRange")}</td>
+					
+						<td>${fieldValue(bean: modelSpecInstance, field: "model")}</td>
 					
 						<td>${fieldValue(bean: modelSpecInstance, field: "name")}</td>
 					

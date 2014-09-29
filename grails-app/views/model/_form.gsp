@@ -2,12 +2,21 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: modelInstance, field: 'modelSpecs', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: modelInstance, field: 'modelSpecs', 'error')} ">
 	<label for="modelSpecs">
-		<g:message code="model.modelSpecs.label" default="Model Specs" />
-		<span class="required-indicator">*</span>
+		<g:message code="model.modelSpecs.label" default="Model Spec" />
+		
 	</label>
-	<g:select id="modelSpecs" name="modelSpecs.id" from="${teslaV2.ModelSpec.list()}" optionKey="id" required="" value="${modelInstance?.modelSpecs?.id}" class="many-to-one"/>
+	
+<ul class="one-to-many">
+<g:each in="${modelInstance?.modelSpecs?}" var="m">
+    <li><g:link controller="modelSpec" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="modelSpec" action="create" params="['model.id': modelInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'modelSpecs.label', default: 'ModelSpec')])}</g:link>
+</li>
+</ul>
+
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: modelInstance, field: 'name', 'error')} ">

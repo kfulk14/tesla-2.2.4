@@ -26,8 +26,6 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="model.modelSpecs.label" default="Model Specs" /></th>
-					
 						<g:sortableColumn property="name" title="${message(code: 'model.name.label', default: 'Name')}" />
 					
 						<g:sortableColumn property="startingCost" title="${message(code: 'model.startingCost.label', default: 'Starting Cost')}" />
@@ -38,9 +36,7 @@
 				<g:each in="${modelInstanceList}" status="i" var="modelInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link controller="model" action="show" id="${modelInstance.id}">${fieldValue(bean: modelInstance, field: "modelSpecs")}</g:link></td>
-					
-						<td>${fieldValue(bean: modelInstance, field: "name")}</td>
+						<td><g:link action="show" id="${modelInstance.id}">${fieldValue(bean: modelInstance, field: "name")}</g:link></td>
 					
 						<td>${fieldValue(bean: modelInstance, field: "startingCost")}</td>
 					
@@ -54,19 +50,15 @@
 		</div>
 		
 		<!-- DOISPLAYS ALL DIFFERNT MODEL SPECS -->
-		<div id="list-modelSpec" class="content scaffold-list" role="main">
-			<h1>Spec List</h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<table>
+		<table>
 				<thead>
 					<tr>
-						<g:sortableColumn property="id" title="${message(code: 'modelSpec.id.label', default: 'ID')}" />
 					
 						<g:sortableColumn property="additionalCost" title="${message(code: 'modelSpec.additionalCost.label', default: 'Additional Cost')}" />
 					
 						<g:sortableColumn property="distanceRange" title="${message(code: 'modelSpec.distanceRange.label', default: 'Distance Range')}" />
+					
+						<th><g:message code="modelSpec.model.label" default="Model" /></th>
 					
 						<g:sortableColumn property="name" title="${message(code: 'modelSpec.name.label', default: 'Name')}" />
 					
@@ -79,12 +71,12 @@
 				<tbody>
 				<g:each in="${modelSpecInstanceList}" status="i" var="modelSpecInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						
-						<td>${fieldValue(bean: modelSpecInstance, field: "id")}</td>
-						
-						<td><g:link controller="ModelSpec", action="show" id="${modelSpecInstance.id}">${fieldValue(bean: modelSpecInstance, field: "additionalCost")}</g:link></td>
+					
+						<td><g:link action="show" id="${modelSpecInstance.id}">${fieldValue(bean: modelSpecInstance, field: "additionalCost")}</g:link></td>
 					
 						<td>${fieldValue(bean: modelSpecInstance, field: "distanceRange")}</td>
+					
+						<td>${fieldValue(bean: modelSpecInstance, field: "model")}</td>
 					
 						<td>${fieldValue(bean: modelSpecInstance, field: "name")}</td>
 					
@@ -96,6 +88,7 @@
 				</g:each>
 				</tbody>
 			</table>
+			
 		
 		
 		

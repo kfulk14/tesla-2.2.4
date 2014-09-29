@@ -18,6 +18,14 @@
 	<g:textField name="distanceRange" value="${modelSpecInstance?.distanceRange}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: modelSpecInstance, field: 'model', 'error')} required">
+	<label for="model">
+		<g:message code="modelSpec.model.label" default="Model" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="model" name="model.id" from="${teslaV2.Model.list()}" optionKey="id" required="" value="${modelSpecInstance?.model?.id}" class="many-to-one"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: modelSpecInstance, field: 'name', 'error')} ">
 	<label for="name">
 		<g:message code="modelSpec.name.label" default="Name" />

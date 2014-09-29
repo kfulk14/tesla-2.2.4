@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${modelSpecInstance?.model}">
+				<li class="fieldcontain">
+					<span id="model-label" class="property-label"><g:message code="modelSpec.model.label" default="Model" /></span>
+					
+						<span class="property-value" aria-labelledby="model-label"><g:link controller="model" action="show" id="${modelSpecInstance?.model?.id}">${modelSpecInstance?.model?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${modelSpecInstance?.name}">
 				<li class="fieldcontain">
 					<span id="name-label" class="property-label"><g:message code="modelSpec.name.label" default="Name" /></span>

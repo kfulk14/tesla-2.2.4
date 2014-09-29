@@ -7,7 +7,7 @@ class Model {
 	String name
 	BigDecimal startingCost
 	
-	static belongsTo = [modelSpecs:ModelSpec]
+	 static hasMany = [modelSpecs: ModelSpec]
 
     static constraints = {
     }

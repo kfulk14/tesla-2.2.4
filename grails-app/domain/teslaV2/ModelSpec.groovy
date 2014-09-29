@@ -9,7 +9,7 @@ class ModelSpec {
 	String additionalCost
 	
 	
-	static hasMany = [models:Model]
+	static belongsTo = [model: Model]
 
     static constraints = {
     }

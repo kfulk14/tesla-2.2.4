@@ -68,7 +68,7 @@
 			
 			#war{
 				padding-left: 100px;
-				padding-top: 340px;
+				padding-top: 240px;
 				font-size: 35px;
 				color: white;
 				text-decoration: underline;	
@@ -146,35 +146,46 @@
 		
 		<div id="page-body" role="main">
 		
+		
+		
+		
 		<div id="welcome">Welcome to Tesla</div>
+
 		
 			
-			<div id="war">INFINITE MILE WARRANTY</div>
-			<div id="text">8 year mile warranty on Model S 85kWh battery and drive unit</div>
+		<g:each in="${teslaV2.Model.list()}" var="modelInstance">
+				<h1><g:link controller="model" action="show" id="${modelInstance.id}"> ${modelInstance.name}</g:link></h1>
+		</g:each>
+		
+		<h1><g:link controller="user" action="show"> Users</g:link></h1>	
 			
 			
-           <div style="background-color: silver; height: 250px;">
-           	<table id="div1">
-					<tr style="text-align:center;">
-				</tr>
-				</table>
+		
+		
+			
+			<div id="war">
+				INFINITE MILE WARRANTY
+			</div>
+			
+			<div id="text">
+				8 year mile warranty on Model S 85kWh battery and drive unit
+			</div>
+			
+			
+        <div style="background-color: silver; height: 250px;">
+			<table id="div1">
+				<tr style="text-align:center;"></tr>
+			</table>
 			
 			
 			<table id="div2">
-					<tr style="text-align:center;">
-				</tr>
-				</table>
+				<tr style="text-align:center;"></tr>
+			</table>
 			
-	
-       
-       
-       	<table id="div3">
-					<tr style="text-align:center;">
-				</tr>
-				</table>
-			
-			
-			</div>
+			<table id="div3">
+				<tr style="text-align:center;"></tr>
+			</table>
+		</div>
 	
          
 		

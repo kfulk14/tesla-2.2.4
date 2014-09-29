@@ -18,10 +18,10 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+		<div id="grailsLogo" role="banner"><a href="/tesla-2.2.4" style="margin-left: 0px;"><img src="${resource(dir: 'images', file: 'tesla.jpeg')}" alt="tesla logo" style="width:85px; height: 105px; position:absolute"/></a></div>
 		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+		
+		
 		<g:javascript library="application"/>
 		<r:layoutResources />
 	

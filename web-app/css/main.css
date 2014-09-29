@@ -24,6 +24,16 @@ html {
 	        box-sizing: border-box;
 }
 
+ 	#specTable{
+			 	border-style: solid;
+				border-color: black;
+				width: 280px;
+				margin-left: 20px;
+				box-shadow: 4px 4px 5px #888888;
+				float:left
+			 }
+
+
 html.no-cssgradients {
 	background-color: #aaa;
 }
@@ -48,7 +58,15 @@ body {
 }
 
 #grailsLogo {
-	background-color: #abbf78;
+	height: 60px;
+}
+#mainBody{
+	padding-top: 50px;
+	padding-left:60px;
+}
+#modelSpecs{
+	margin-top: 80px;
+
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
