@@ -157,7 +157,8 @@
 				<h1><g:link controller="model" action="show" id="${modelInstance.id}"> ${modelInstance.name}</g:link></h1>
 		</g:each>
 		
-		<h1><g:link controller="user" action="show"> Users</g:link></h1>	
+		<h1><g:link controller="user" action="show"> Users</g:link></h1><br>
+		<h1><g:link controller="comparison" action="show"> Comparison</g:link></h1>		
 			
 			
 		

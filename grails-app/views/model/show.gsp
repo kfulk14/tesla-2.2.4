@@ -69,7 +69,7 @@
 		</div>
 		
 		<div id="modelSpecs">
-			<g:each in="${modelInstance.modelSpecs}" var="spec">
+			<g:each in="${modelSpecsOrder}" var="spec">
 				<div>
 					<g:render template="/modelSpec/display" model="[modelSpec: spec]" />
 				</div>

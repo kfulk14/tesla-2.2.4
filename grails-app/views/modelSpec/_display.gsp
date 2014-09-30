@@ -26,7 +26,7 @@
 					</tr>
 					
 					<tr>
-						<td><g:link controller="user" action="list" id="${modelSpec.id}">Compare model</g:link></td>
+						<td><g:link controller="comparison" action="compare" id="${modelSpec.id}">Compare model</g:link></td>
 						<td></td>
 					</tr>
 				</table>

@@ -37,8 +37,11 @@ class ModelController {
             redirect(action: "list")
             return
         }
-
-        [modelInstance: modelInstance]
+		
+		//Using grails Domain class findAllBy we are looking up modelInstnace of the class Model and mapping it with the [sort:'name']
+		List specs = ModelSpec.findAllByModel(modelInstance, [sort:'name'] )
+		
+        [modelInstance: modelInstance, modelSpecsOrder:specs ]
     }
 
     def edit(Long id) {

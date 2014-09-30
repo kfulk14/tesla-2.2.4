@@ -1,10 +1,12 @@
 package teslaV2
 
 class Comparison {
-	Integer modelId
-	Integer specId
+	
+	ModelSpec spec
+	User buyer
 	
 
     static constraints = {
-    }
+    
+		}
 }
