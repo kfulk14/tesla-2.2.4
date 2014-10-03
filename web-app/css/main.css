@@ -59,15 +59,19 @@ body {
 
 #grailsLogo {
 	height: 60px;
+	background-color: grey;
 }
 #mainBody{
-	padding-top: 50px;
-	padding-left:60px;
+/* 	padding-top: 50px; */
+/* 	padding-left:60px; */
+	
 }
 #modelSpecs{
-	margin-top: 80px;
+	margin-top: 10px;
 
 }
+
+
 
 /* replace with .no-boxshadow body if you have modernizr available */
 .ie6 body,
@@ -151,7 +155,77 @@ img {
 }
 
 /* NAVIGATION MENU */
+/* TOP NAVIGATION BAR */
+/* TOP NAVIGATION BAR */
+#nav{
+	width:846px;
+	margin-left:120px;
+	margin-top:10px;
+	 position:absolute;
+	
+	 
+	 
+}
 
+	ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  //-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  //-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  //box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+ul li {
+  font: bold 18px sans-serif;
+  width: 100px;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+ // background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+ul li:hover {
+  //background: #555;
+  color: #fff;
+}
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+ul li ul li:hover { background: #666; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}page
 .nav {
 	background-color: #efefef;
 	padding: 0.5em 0.75em;
@@ -548,6 +622,7 @@ th:hover, tr:hover {
 	        box-shadow: 0 0 3px 1px #aaaaaa;
 	margin: 0.1em 0 0 0;
 	border: none;
+	width: 122px;
 }
 
 .buttons input,

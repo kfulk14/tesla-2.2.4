@@ -28,6 +28,7 @@
 					
 						<g:sortableColumn property="startingCost" title="${message(code: 'model.startingCost.label', default: 'Starting Cost')}" />
 					
+						<g:sortableColumn property="imageUrl" title="${message(code: 'model.imageUrl.label', default: 'Image Url')}" />
 					</tr>
 				</thead>
 				<tbody>
@@ -37,6 +38,8 @@
 						<td><g:link action="show" id="${modelInstance.id}">${fieldValue(bean: modelInstance, field: "name")}</g:link></td>
 					
 						<td>${fieldValue(bean: modelInstance, field: "startingCost")}</td>
+						
+						<td>${fieldValue(bean: modelInstance, field: "imageUrl")}</td>
 					
 					</tr>
 				</g:each>

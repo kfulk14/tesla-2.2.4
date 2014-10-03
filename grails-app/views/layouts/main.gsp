@@ -18,7 +18,23 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="/tesla-2.2.4" style="margin-left: 0px;"><img src="${resource(dir: 'images', file: 'tesla.jpeg')}" alt="tesla logo" style="width:85px; height: 105px; position:absolute"/></a></div>
+		<div id="nav">
+				
+				<ul>
+					<g:each in="${teslaV2.Model.list()}" var="modelInstance">
+						<li><g:link controller="model" action="show" id="${modelInstance.id}"> ${modelInstance.name}</g:link></li>
+					</g:each>
+				</ul>
+				<ul>
+					<li><g:link controller="user" action="show"> Users</g:link></li>
+				</ul>
+				<ul>
+					<li><g:link controller="comparison" action="show"> Comparison</g:link></li>	
+				</ul>
+			
+		</div>
+		<div id="grailsLogo" role="banner"><a href="/tesla-2.2.4" style="margin-left: 0px; margin-top:0px;"><img src="${resource(dir: 'images', file: 'tesla.jpeg')}" alt="tesla logo" style="width:85px; height: 105px; position:absolute"/></a></div>
+		
 		<g:layoutBody/>
 		
 		

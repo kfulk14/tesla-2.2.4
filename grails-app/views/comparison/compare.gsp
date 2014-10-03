@@ -33,9 +33,16 @@
 		
 		
 		
-		<div id="center">User: ${c.buyer.firstName}</div><br/>
-		<div id="center">Spec name: ${c.spec.name}</div><br>
-		<div id="center">Model Name: ${model.name}</div><br>
+		<div id="center">User: 
+			${c.buyer.firstName}
+		</div>
+		<br/>
+		<div id="center">Spec name: 
+			${c.spec.name}
+		</div><br>
+		<div id="center">Model Name: 
+			${model.name}
+		</div><br>
 		
 
 		

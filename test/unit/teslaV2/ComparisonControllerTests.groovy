@@ -11,7 +11,7 @@ class ComparisonControllerTests {
 
     def populateValidParams(params) {
         assert params != null
-        // TODO: Populate valid properties like...
+        // Populate valid properties like...
         //params["name"] = 'someValidName'
     }
 
@@ -101,7 +101,7 @@ class ComparisonControllerTests {
 
         // test invalid parameters in update
         params.id = comparison.id
-        //TODO: add invalid values to params object
+        // add invalid values to params object
 
         controller.update()
 

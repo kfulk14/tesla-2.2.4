@@ -35,3 +35,12 @@
 	<g:field name="startingCost" value="${fieldValue(bean: modelInstance, field: 'startingCost')}" required=""/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: modelInstance, field: 'imageUrl', 'error')} ">
+	<label for="imageUrl">
+		<g:message code="model.imageUrl.label" default="Image" />
+		
+	</label>
+	<g:textField name="Image" value="${modelInstance?.imageUrl}"/>
+</div>
+
+

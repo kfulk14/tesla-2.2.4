@@ -52,7 +52,7 @@ class ComparisonController {
 		//User currentUser = securityService.currentUser()
 		
 	//Return the comparison table list with the name of the user 	
-		return ['c': Comparison.findAllByBuyer(buyer), 'buyer':buyer] 
+		return ['c': Comparison.findAllByBuyer(buyer), 'buyer':buyer, 'modelName':Model.findById(1)] 
 		
 		
     }
@@ -101,19 +101,20 @@ class ComparisonController {
         def comparisonInstance = Comparison.get(id)
         if (!comparisonInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'comparison.label', default: 'Comparison'), id])
-            redirect(action: "list")
+            redirect(action: "show")
             return
         }
 
         try {
             comparisonInstance.delete(flush: true)
             flash.message = message(code: 'default.deleted.message', args: [message(code: 'comparison.label', default: 'Comparison'), id])
-            redirect(action: "list")
+            redirect(action: "show")
         }
         catch (DataIntegrityViolationException e) {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'comparison.label', default: 'Comparison'), id])
             redirect(action: "show", id: id)
         }
+	
     }
 	
 //Take the first and only user and adds to comparison table along with the spec Id 

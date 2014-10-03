@@ -37,7 +37,7 @@ class ModelController {
             redirect(action: "list")
             return
         }
-		
+		// TODO: Read below description
 		//Using grails Domain class findAllBy we are looking up modelInstnace of the class Model and mapping it with the [sort:'name']
 		List specs = ModelSpec.findAllByModel(modelInstance, [sort:'name'] )
 		

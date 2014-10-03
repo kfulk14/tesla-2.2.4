@@ -26,7 +26,7 @@
 			
 
 			#page-body {
-				margin: 1.5em 0em 0em 0em;
+				margin: 0em 0em 0em 0em;
 				background-image: url('${resource(dir: "images", file: "model-s.png")}');
 				 height: 540px;
 				
@@ -99,6 +99,7 @@
 				float:left;
 				height: 200px;
 			 }
+			 
 			 #div2{
 			background-image: url('${resource(dir: "images", file: "customers.png")}');"
 			 	border-style: solid;
@@ -142,34 +143,16 @@
 	<body>
 	
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		
-		
 		<div id="page-body" role="main">
 		
-		
-		
-		
 		<div id="welcome">Welcome to Tesla</div>
-
-		
-			
-		<g:each in="${teslaV2.Model.list()}" var="modelInstance">
-				<h1><g:link controller="model" action="show" id="${modelInstance.id}"> ${modelInstance.name}</g:link></h1>
-		</g:each>
-		
-		<h1><g:link controller="user" action="show"> Users</g:link></h1><br>
-		<h1><g:link controller="comparison" action="show"> Comparison</g:link></h1>		
-			
-			
-		
-		
-			
+	
 			<div id="war">
 				INFINITE MILE WARRANTY
 			</div>
 			
 			<div id="text">
-				8 year mile warranty on Model S 85kWh battery and drive unit
+				8 year mile warranty on Model S 85kWh battery and drive unit s
 			</div>
 			
 			
